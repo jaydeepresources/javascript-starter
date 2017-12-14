@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
@@ -29,14 +30,46 @@
             </ul>
         </div>
     </nav>
-
-    <div class="container-fluid">
+    <div class="container">
         <h1 class="text-success">Welcome to JavaScript Basics !</h1>
         <button class="btn btn-primary" onclick="showAlert()">click me</button>
         <button class="btn btn-secondary" onmouseover="showDate()" onmouseout="hideDate()">hover to see date</button>
         <div id="alert"></div>
         <div id="date"></div>
     </div>
+    <br>
+    <div class="container">
+        <div class="jumbotron" id="someText">
+            <blockquote class="blockquote">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in
+                    <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+        </div>
+        <button id="toggle" class="btn btn-danger" onclick="toggleSection()">hide</button>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <h1>List of Hobbies</h1>
+        <ul id="hobbiesList" class="list-group">
+            <script>iterateHobbies();</script>
+        </ul>
+    </div>
+
+    <div class="container">
+        <br>
+        <h1>Emp Table having Id and Name</h1>
+        <div id="data">            
+                <script>
+                    tabs();
+                </script>
+        </div>
+        </table>
+    </div>
+
 </body>
 
 </html>
