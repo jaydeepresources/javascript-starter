@@ -64,3 +64,15 @@ function tabs() {
     }
     data.innerHTML = tableEmp;
 }
+
+function addHobby(){
+    var newHobby = document.getElementById('newHobby').value;
+    hobbies.push(newHobby);
+    iterateHobbies();
+    document.getElementById('newHobby').value = '';
+}
+
+function resetHobbies(){
+    hobbies = ['music', 'films', 'dance', 'books'];
+    iterateHobbies();
+}

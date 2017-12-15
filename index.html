@@ -14,18 +14,18 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Org Name</a>
+        <a class="navbar-brand" href="index.html">Org Name</a>
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Basics</a>
+                    <a class="nav-link" href="index.html">Basics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Forms</a>
+                    <a class="nav-link" href="new user.html">Forms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">API's</a>
+                    <a class="nav-link" href="posts.html">API's</a>
                 </li>
             </ul>
         </div>
@@ -57,9 +57,20 @@
         <ul id="hobbiesList" class="list-group">
             <script>iterateHobbies();</script>
         </ul>
+        <br>
+        <div class="form-group">
+            <input type="text" class="form-control" id="newHobby" placeholder="Enter new hobby">
+        </div>
+        <div class="form-group">
+            <div class="btn-group btn-block" role="group">
+                <button type="button" class="btn btn-primary btn-lg" onclick="addHobby()">Add Hobby</button>
+                <button type="button" class="btn btn-danger btn-lg" onclick="resetHobbies()">Reset Hobbies</button>                
+            </div>           
+        </div>
+
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <br>
         <h1>Emp Table having Id and Name</h1>
         <div id="data">            
@@ -68,7 +79,8 @@
                 </script>
         </div>
         </table>
-    </div>
+    </div> -->
+
 
 </body>
 
