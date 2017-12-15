@@ -60,19 +60,45 @@ function tabs() {
         for (var j = 0; j < emp[i].length; j++) {
             tableEmp += "<td>" + emp[i][j] + "</td>";
         }
-        tableEmp += "</tr>";       
+        tableEmp += "</tr>";
     }
     data.innerHTML = tableEmp;
 }
 
-function addHobby(){
+function addHobby() {
     var newHobby = document.getElementById('newHobby').value;
     hobbies.push(newHobby);
     iterateHobbies();
     document.getElementById('newHobby').value = '';
 }
 
-function resetHobbies(){
+function resetHobbies() {
     hobbies = ['music', 'films', 'dance', 'books'];
     iterateHobbies();
+}
+var todos = [];
+
+function fetchTodos() {
+
+    fetch('https://jsonplaceholder.typicode.com/todos')
+        .then((response) => response.json())
+        .then((response) => {
+            todos = response;
+            mapTodos();
+        })
+}
+
+function mapTodos() {
+
+    var area = document.getElementById('todoArea');
+    for (var i = 0; i < todos.length; i++) {
+        area.innerHTML +=
+            "<div class='card border-primary mb-3'>" +
+            "<div class='card-header'>" + "#" + todos[i].id + "</div>" +
+            "<div class='card-body'>" +
+            "<h4 class='card-title'>" + todos[i].title + "</h4>" +
+            "<p class='card-text'>" + ((todos[i].completed) ? 'done' : 'not done') + "</p>" +
+            "</div >" +
+            "</div >"
+    }
 }
